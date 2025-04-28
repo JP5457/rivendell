@@ -1,0 +1,8 @@
+sounddevice 
+soundfile 
+requests 
+numpy
+pyaudio
+Flask
+apscheduler
+Flask-APScheduler

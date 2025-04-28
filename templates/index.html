@@ -1,0 +1,42 @@
+<!DOCTYPE html> <title>Vase</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+	rel="stylesheet"
+	href="{{ url_for('static', filename='style.css') }}"
+/>
+<link
+	rel="icon"
+	type="image/x-icon"
+	href="{{ url_for('static', filename='favicon.ico') }}"
+/>
+<body>
+    <table id="streamTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Stream</th>
+            <th>Device</th>
+            <th>State</th>
+            <th>Stop</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be inserted here -->
+        </tbody>
+      </table>
+<div class="labeledinp">
+    <label>Stream URL:</label>
+    <input type="text" id="streamurl" />
+</div>
+<div id="devices">
+<select id="deviceselector">
+</select>
+<button id="refreshdevices"> refresh devices </button>
+</div>
+<button id="startstream"> start </button>
+</body>
+
+<script
+	src="{{ url_for('static', filename='index.js') }}"
+	type="module"
+></script>

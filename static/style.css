@@ -1,0 +1,132 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    flex-direction: column;
+    font-size: 14px; /* Slightly smaller base font size */
+}
+
+/* Center the table */
+#streamTable {
+    width: 80%;
+    margin: 20px 0;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Adds gap between rows */
+    border: 1px solid #cce7ff; /* Light blue border */
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for table */
+}
+
+/* Table header styling */
+#streamTable thead {
+    background-color: #0066cc; /* Blue background for header */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#streamTable th {
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 16px; /* Slightly smaller font for headers */
+}
+
+/* Table row styling */
+#streamTable tbody tr {
+    background-color: #f9f9f9; /* Light grey rows */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#streamTable td {
+    padding: 12px 15px; /* Reduced padding for more room */
+    font-size: 14px; /* Smaller font size for table content */
+}
+
+/* Remove hover effect from table rows */
+#streamTable tbody tr:hover {
+    background-color: transparent; /* Remove hover effect */
+}
+
+/* Inputs and buttons */
+.labeledinp,
+#devices {
+    margin: 15px 0;
+    width: 80%;
+}
+
+label {
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Button styling */
+button {
+    background-color: #0066cc; /* Blue background */
+    color: white;
+    padding: 12px 25px; /* Standard padding */
+    font-size: 16px; /* Standard font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #004d99; /* Darker blue on hover */
+}
+
+/* Specific styling for start button */
+#startstream {
+    background-color: #0066cc; /* Blue background */
+    padding: 15px 30px; /* Larger padding */
+    font-size: 18px; /* Larger font size */
+    margin-top: 20px;
+}
+
+#startstream:hover {
+    background-color: #004d99; /* Darker blue on hover */
+}
+
+/* Centering for devices and start button */
+#devices,
+#startstream {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #streamTable {
+        width: 100%;
+    }
+    .labeledinp,
+    #devices {
+        width: 90%;
+    }
+}

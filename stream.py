@@ -59,8 +59,4 @@ if __name__ == "__main__":
     list_output_devices()
     dev = input("Enter output device index (or leave blank for default): ").strip()
     device_index = int(dev) if dev else None
-    while True:
-        try:
-            play_stream_ffmpeg(url, device_index)
-        except:
-            pass
+    play_stream_ffmpeg(url, device_index)
