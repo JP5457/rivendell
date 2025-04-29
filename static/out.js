@@ -1,9 +1,7 @@
-window.open("http://localhost:5010/out"); 
-
 let devices = {}
 
 function updateDevices() {
-    const api_url = "/getdevices";
+    const api_url = "/getoutdevices";
     fetch(api_url)
         .then((response) => {
             return response.json();
@@ -37,7 +35,7 @@ function populateSelect(data) {
 }
 
 function updateState() {
-    const api_url = "/getstates";
+    const api_url = "/getoutstates";
 		fetch(api_url)
 			.then((response) => {
 				return response.json();
@@ -58,7 +56,7 @@ function StartStream() {
 	console.log(streamurl);
     console.log(device)
     console.log(devicename)
-	const api_url = "/startstream";
+	const api_url = "/startout";
 	fetch(api_url, {
 		method: "POST",
 		body: JSON.stringify({
@@ -120,8 +118,8 @@ function updateTable(data) {
 
         row.innerHTML = `
             <td>${device.id}</td>
-            <td>${device.url}</td>
             <td>${device.devicename}</td>
+            <td>${device.url}</td>
             <td>${device.state}</td>
             <td></td> <!-- placeholder for button -->
         `;
@@ -131,6 +129,8 @@ function updateTable(data) {
         tbody.appendChild(row);
     });
 }
+
+await new Promise(r => setTimeout(r, 2000));
 
 updateDevices();
 
